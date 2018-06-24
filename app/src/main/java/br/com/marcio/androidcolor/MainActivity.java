@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.this, CoresFavoritasActivity.class
                 );
                 startActivity(intent);
-                finish();
         }
 
         return super.onOptionsItemSelected(item);
