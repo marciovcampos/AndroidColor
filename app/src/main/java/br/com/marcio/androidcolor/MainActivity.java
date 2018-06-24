@@ -6,11 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
+        
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,24 +25,28 @@ public class MainActivity extends AppCompatActivity {
     public void mudarCorRandom(View view){
 
       ImageView imageView = (ImageView) findViewById(R.id.androidRobot);
+      TextView labelCorAndroidRobot = (TextView) findViewById(R.id.labelCorAndroidRobot);
 
-      int colorRandom = gerarCorAutomatica();
+      //gera cor Aletoria
+      String corHexa = gerarCorHexaDecimal();
 
-//        imageView.setColorFilter(ContextCompat.getColor(this, R.color.colorPrimaryDark), android.graphics.PorterDuff.Mode.MULTIPLY);
-        imageView.setColorFilter(colorRandom);
+      imageView.setColorFilter(Color.parseColor(corHexa));
+      labelCorAndroidRobot.setText(corHexa.toUpperCase());
 
     }
 
-    public int gerarCorAutomatica(){
+    public String gerarCorHexaDecimal(){
 
         Random random = new Random();
         int nextInt = random.nextInt(256*256*256);
         String colorString = String.format("#%06x", nextInt);
-
-        int color = Color.parseColor(colorString); //The color u want
-
-        return color;
+        return colorString;
     }
+
+
+
+
+
 
 
 }
