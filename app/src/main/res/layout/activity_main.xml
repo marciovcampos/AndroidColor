@@ -35,7 +35,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/colorDanger"
-            android:capitalize="characters"
             android:onClick="mudarCorRandom"
             android:src="@drawable/baseline_thumb_down_alt_black_48"
 
