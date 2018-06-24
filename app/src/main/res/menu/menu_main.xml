@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/mnSalvarId"
+        android:id="@+id/mnCoresFavoristas"
         android:title="Cores Favoritas"
     />
 

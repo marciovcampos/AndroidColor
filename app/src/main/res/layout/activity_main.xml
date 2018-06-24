@@ -48,7 +48,7 @@
             android:src="@drawable/baseline_thumb_up_alt_black_48"
             android:tint="@color/colorWhite"
             android:backgroundTint="@color/colorSucess"
-            android:onClick="mudarCorRandom"
+            android:onClick="salvarCorFavorita"
             />
 
     </LinearLayout>
