@@ -103,7 +103,7 @@ public class SplashScreen extends AppCompatActivity {
 
                 //gera cor random
                 Random rand = new Random();
-                btn.setBackgroundColor(Color.rgb(rand.nextFloat(), rand.nextFloat(), rand.nextFloat()));
+                btn.setBackgroundColor(geraCorHexa(rand.nextFloat(), rand.nextFloat(), rand.nextFloat()));
 
                 //coloca atraso de 100millisegundos para exibir os botões
                 Handler handler = new Handler();
@@ -165,6 +165,13 @@ public class SplashScreen extends AppCompatActivity {
         }
         return coluna;
 
+    }
+
+    public static int geraCorHexa(float red, float green, float blue) {
+        return 0xff000000 |
+                ((int) (red   * 255.0f + 0.5f) << 16) |
+                ((int) (green * 255.0f + 0.5f) <<  8) |
+                (int) (blue  * 255.0f + 0.5f);
     }
 
 
